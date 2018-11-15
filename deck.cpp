@@ -18,7 +18,6 @@ Card Deck::deal(){
 
 std::vector<Card> Deck::dealCards(int numCards){
    std::vector<Card> cards = *(new std::vector<Card>(hand.begin(), hand.begin()+numCards));
-   std::cout << "cards has " << cards.size() << " cards and will be removed from deck" << std::endl;
    hand.erase(hand.begin(), hand.begin()+numCards);
    return cards;
 }

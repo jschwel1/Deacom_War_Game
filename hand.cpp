@@ -14,6 +14,7 @@ Hand::Hand(){
 
 Hand::Hand(std::vector<Card>& h):
     hand(h){
+    // initialize random seed for shuffling
     std::srand(unsigned(std::time(nullptr)));
 }
 
@@ -50,3 +51,6 @@ void Hand::shuffleHand(){
     std::random_shuffle(hand.begin(), hand.end());
 }
 
+Card Hand::showCardAt(int i){
+    return hand.at(i);
+}
